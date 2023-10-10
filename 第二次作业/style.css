@@ -1,0 +1,147 @@
+h1 {
+	color: #0037ff;
+	text-align: center;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+/*添加一些样式来布局左右容器。由于只有一个左容器和一个右容器，
+因此它们在标记中被赋予了 id。要设置它们的样式，请使用*/
+#left-container {
+	background-color: #eee;
+	width: 15%; /*这些容器以绝对定位放置在屏幕的最左侧和最右侧，并使用百分比作为其宽度，以便它们可以针对小型移动屏幕进行缩放。*/
+	left: 0px; /*放在左边 */
+	top: 0px;
+	position: absolute; /*绝对位置*/
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#right-container {
+	background-color: #eee;
+	width: 15%;
+	right: 0px; /*放在右边*/
+	top: 0px;
+	position: absolute;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+#terrarium{
+	background-color: white;
+	width: 60%; 
+	left: 20%; 
+	top: 10%;
+	position: absolute; /*绝对位置*/
+	height: 90%;
+	padding: 10px;
+}
+
+
+.flex-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*瓶塞*/
+.cork {
+	flex: 0.05;
+	width: 45%;
+	height: 1px;
+	background-color: #431c01; 
+	/*position: relative;*/
+	border-radius: 0 0 1rem 1rem;
+  }
+
+.plant-holder {
+	position: relative; 
+	height: 13%; 
+	left: -10px; 
+}
+
+.plant {
+	position: absolute; 
+	max-width: 150%;
+	max-height: 150%;
+	z-index: 2; 
+}
+
+.jar-walls {
+	flex: 1;
+	height: 80%;
+	width: 60%;
+	background: #fbfcfc;
+	border-radius: 1rem 1rem 0 0; /*使元素边框更加圆滑——使其更像瓶子*/
+	opacity: 0.5; /*透明度——0为完全透明，1为完全不透明*/
+	z-index: 1; /*堆叠顺序*/
+}
+
+.jar-glossy-long{
+    width: 3%;
+    height: 15%;
+    background: white;
+    border-radius: 1rem;
+    position: absolute;
+    top: 60%;
+	left: 25%;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.jar-glossy-short{
+    width: 3%;
+    height: 5%;
+    background: white;
+    border-radius: 1rem;
+    position: absolute;
+	top: 50%;
+	left: 25%;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/*瓶口设计*/
+.jar-top {
+	flex: 0.1;
+	width: 20%;
+	height: 5%;
+	background: #ffffff;
+	border-radius: 1rem 1rem 0 0;
+	opacity: 0.7;
+	z-index: 1;
+}
+
+/*瓶底*/
+.jar-bottom {
+	flex: 0.1;
+	width: 70%;
+	height: 1%;
+	background: rgb(255, 255, 255);
+	opacity: 0.7;
+}
+
+
+.dirt {
+	flex: 0.1;
+	width: 60%;
+	height: 5%;
+	background: #ba745f;
+	/*position: absolute;*/
+	border-radius: 0 0 1rem 1rem;
+	opacity: 0.4;
+	z-index: 1;
+}
+
+
+
+
