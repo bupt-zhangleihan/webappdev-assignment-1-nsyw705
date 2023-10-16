@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>元素介绍</title>
+</head>
+<body>
+
+<div id="div1">
+<p id="p1">Document接口表示任何在浏览器中载入的网页，并作为网页内容的入口。同时包含了许多的对整个网页的操作方法，如对其他元素进行创建、增加、减少和修改等等</p>
+<p id="p2">同时他本身也包含了许多的使用方法:</p>
+</div>
+<div id="div2">
+    <p id="p1">如:在网页中可以通过document.titie来获得标题</p>
+    <p id="p2">
+            样例：alert(document.title); 
+            <br>
+            document.title = "需要输入的内容！";
+            <br>
+
+            alert(document.title); 
+          </p>
+</div>
+<div id="div3">
+    <p id="p1">如:在网页中可以通过document.Element和document.createTextNode来创建新的元素和文本内容</p>
+    <p id="p2">
+            样例：var para=document.createElement("p");
+            <br>
+            var node=document.createTextNode("添加的元素");
+            <br>
+            para.appendChild(node); 
+          </p>
+</div>
+<div id="div3">
+    <p id="p1">如:在网页中可以通过document来修改网页样式</p>
+    <p id="p2">
+            样例：document.getElementById("p2").style.color="blue";
+            <br>
+            document.getElementById("p2").style.fontFamily="Arial";
+            <br>
+            document.getElementById("p2").style.fontSize="larger";
+          </p>
+</div>
+<script>
+    document.getElementById("p2").style.color="blue";
+    document.getElementById("p2").style.fontFamily="Arial";
+    document.getElementById("p2").style.fontSize="larger";
+    </script>
+</body>
+</html>
