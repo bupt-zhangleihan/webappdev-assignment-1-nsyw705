@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('canvas');
 
-    // Create a 2D array to represent the pixel grid
+    // 创建一个二维平面即画布
     const pixelGrid = [];
     for (let i = 0; i < 40; i++) {
         pixelGrid[i] = [];
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentColor = 'black';
 
-    // Handle keyboard events for drawing
+    // 确定输入的键，判断下一步操作
     document.addEventListener('keydown', (event) => {
         if (event.key === ' ') {
             // Change color when the spacebar is pressed
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let cursorY = 0;
 
     function moveCursor(dy, dx) {
-        // Move the cursor within the canvas bounds
+        // 在画布范围内移动光标
         cursorX = Math.min(39, Math.max(0, cursorX + dx));
         cursorY = Math.min(39, Math.max(0, cursorY + dy));
     }
 
     function getRandomColor() {
-        // Generate a random color
+        // 生成随机的颜色
         const letters = '0123456789ABCDEF';
         let color = '#';
         for (let i = 0; i < 6; i++) {
