@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 确定输入的键，判断下一步操作
     document.addEventListener('keydown', (event) => {
         if (event.key === ' ') {
-            // Change color when the spacebar is pressed
+            // 按空格键时改变颜色
             currentColor = getRandomColor();
         } else if (event.key === 'ArrowUp') {
-            // Move the cursor up
+            // 上移
             moveCursor(-1, 0);
         } else if (event.key === 'ArrowDown') {
-            // Move the cursor down
+            // 下移
             moveCursor(1, 0);
         } else if (event.key === 'ArrowLeft') {
-            // Move the cursor left
+            // 左移
             moveCursor(0, -1);
         } else if (event.key === 'ArrowRight') {
-            // Move the cursor right
+            // 右移
             moveCursor(0, 1);
         } else {
-            // Draw a pixel with the current color
+            // 用当前颜色绘制
             pixelGrid[cursorY][cursorX].style.backgroundColor = currentColor;
         }
     });
